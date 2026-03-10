@@ -1,0 +1,25 @@
+{
+  "name": "gambler_ruin",
+  "description": "Problème de la ruine du joueur – états {0..6}, absorbants {0,6}",
+  "states": [0, 1, 2, 3, 4, 5, 6],
+  "absorbing_states": [0, 6],
+  "transient_states": [1, 2, 3, 4, 5],
+  "default_p": 0.5,
+  "scenarios": [
+    {"p": 0.3, "label": "défavorable"},
+    {"p": 0.4, "label": "légèrement défavorable"},
+    {"p": 0.5, "label": "équitable"},
+    {"p": 0.6, "label": "légèrement favorable"},
+    {"p": 0.7, "label": "favorable"}
+  ],
+  "analytical_results_p05": {
+    "absorption_probs_from_2": {"0": 0.6667, "6": 0.3333},
+    "expected_time_from_2": 8.0,
+    "formula_verification": "P(ruine | X0=i) = 1 - i/N  →  1 - 2/6 = 0.6667",
+    "time_formula": "E[T | X0=i] = i*(N-i)  →  2*(6-2) = 8"
+  },
+  "monte_carlo": {
+    "n_trials": 200000,
+    "seed": 42
+  }
+}

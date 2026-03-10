@@ -1,0 +1,12 @@
+{
+  "name": "benchmark_config",
+  "description": "Configuration des graphes aléatoires pour les benchmarks (Partie IV)",
+  "graphs": [
+    {"n_nodes": 10,  "n_edges": 20,  "seed": 1, "name": "rand_10n_20e"},
+    {"n_nodes": 20,  "n_edges": 50,  "seed": 2, "name": "rand_20n_50e"},
+    {"n_nodes": 50,  "n_edges": 150, "seed": 3, "name": "rand_50n_150e"},
+    {"n_nodes": 100, "n_edges": 400, "seed": 4, "name": "rand_100n_400e"}
+  ],
+  "weighted_astar_weights": [1.0, 1.5, 2.0, 3.0, 5.0],
+  "algorithms": ["UCS", "Greedy", "A*", "Weighted_A*"]
+}

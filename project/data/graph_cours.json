@@ -1,0 +1,29 @@
+{
+  "name": "cours",
+  "description": "Graphe oriente pondere du cours ENSET - source S, but G",
+  "start": "S",
+  "goal": "G",
+  "heuristics": {
+    "admissible_coherente": {
+      "S": 7, "A": 6, "B": 5, "C": 4, "D": 2, "G": 0
+    },
+    "admissible_non_coherente": {
+      "S": 7, "A": 6, "B": 4, "C": 4, "D": 1, "G": 0
+    },
+    "non_admissible": {
+      "S": 10, "A": 9, "B": 8, "C": 6, "D": 5, "G": 0
+    }
+  },
+  "graph": {
+    "S": [["A", 1], ["B", 4]],
+    "A": [["C", 2], ["D", 5]],
+    "B": [["D", 1]],
+    "C": [["G", 5]],
+    "D": [["G", 3]],
+    "G": []
+  },
+  "optimal_solution": {
+    "path": ["S", "A", "C", "G"],
+    "cost": 8
+  }
+}
