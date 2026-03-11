@@ -30,8 +30,6 @@
 - [Resultats](#resultats)
 - [Extensions](#extensions)
 - [Dependances](#dependances)
-- [FAQ et Depannage](#faq-et-depannage)
-- [References](#references)
 
 ---
 
